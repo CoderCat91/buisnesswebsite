@@ -7,6 +7,7 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 
 *{
@@ -96,8 +97,74 @@ body {
 .main_container .content .item_wrap {
     width: 50%;
     padding:10px;
+    height: 200px;
 }
 
 .main_container .content .item_wrap .item {
-    
+    padding: 25px;
+    background: #09F4DF;
+    line-height: 22px;
+    color: white;
+}
+
+@media (max-width: 992px) {
+    .navbar{
+        height:100px;
+        padding:12px;
+    }
+    .navbar .inner_navbar{
+        flex-direction: column;
+    }
+    .main_container {
+        margin-top:500px;
+    }
+}
+
+@media (max-width: 728px) {
+    .navbar{
+        height:60px;
+    }
+    .navbar .inner_navbar{
+        flex-direction: row;
+    }
+    .main_container {
+        margin-top:500px;
+    }
+    .navbar .menu ul {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        display: block;
+        background: turquoise;
+        width: 100%;
+    }
+    .navbar .menu ul li {
+        padding: 10px
+    }
+    .navbar .menu ul a{
+        width: 100%;
+        padding: 12px;
+    }
+    .navbar .hamburger {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        color: #09F4DF;
+        font-size: 25px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    .navbar .hamburger:hover {
+        color: #09F4DF;
+    }
+    .navbar .menu{
+        display: none;
+    }
+    .navbar .menu.active{
+        display: block;
+    }
+    .main_container .content .item_wrap{
+        width: 100%;
+    }
 }
