@@ -100,11 +100,13 @@ body {
 .main_container {
     padding: 0px;
     background: #fff;
+    height: 500px;
 }
 
 .main_container .content {
     width: 100%;
     overflow: hidden;
+    display: flex;
 }
 
 .main_container .content .item_wrap {
@@ -117,7 +119,9 @@ body {
     padding: 25px;
     background: #fff;
     line-height: 22px;
-    color: black;
+    color: #000;
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.699), 0 6px 20px 0 rgba(171, 173, 168, 0.671);
 }
 
 .hero-text h1 {
@@ -155,8 +159,13 @@ body {
     border: 1px solid black;
   }
 p {
-    text-align: left;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
 .about {
   font-family: 'Readex Pro', sans-serif;
   color: black;
