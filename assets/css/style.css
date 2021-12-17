@@ -22,7 +22,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    padding: 0px;
+    padding: 0 25px;
+    overflow: hidden;
 }
 
 .navbar .inner_navbar{
@@ -41,7 +42,7 @@ body {
 .navbar .logo a {
     font-family: 'Fredoka One', cursive;
     font-weight: 700;
-    font-size: 26px;
+    font-size: 24px;
     letter-spacing: 3px;
     color: #09F4DF;
 }
@@ -59,8 +60,12 @@ body {
 .navbar .menu ul li a {
     font-family: 'Fredoka One', cursive;
     display: block;
-    width: 100%;
+    width: 120px;
+    margin-right: 10px;
     background: #09F4DF;
+    text-transform: uppercase;
+    border-radius: 50px;
+    letter-spacing: 2px;
     text-align: center;
     font-size: 14px;
     color: #000;
@@ -115,67 +120,6 @@ body {
     color: black;
 }
 
-@media (max-width: 992px) {
-    .navbar{
-        height:50px;
-    }
-    .navbar .inner_navbar{
-        flex-direction: column;
-    }
-    .main_container {
-    }
-}
-
-@media (max-width: 728px) {
-    .navbar{
-        height:50px;
-    }
-    .navbar .inner_navbar{
-        flex-direction: row;
-    }
-    .main_container {
-    }
-    .navbar .menu ul {
-        position: absolute;
-        margin-top:0;
-        top: 50px;
-        left: 0;
-        display: block;
-        background: black;
-        width: 100%;
-    }
-    .navbar .menu ul li {
-        padding: 10px
-    }
-    .navbar .menu ul a{
-        width: 100%;
-        padding: 12px;
-        align-content: center;
-    }
-    .navbar .hamburger {
-        display: block;
-        position: absolute;
-        top: 5px;
-        right: 25px;
-        color: #09F4DF;
-        font-size: 25px;
-        cursor: pointer;
-        transition: all 0.2s ease;
-    }
-    .navbar .hamburger:hover {
-        color: #09F4DF;
-    }
-    .navbar .menu{
-        display: none;
-    }
-    .navbar .menu.active{
-        display: block;
-    }
-    .main_container .content .item_wrap{
-        width: 100%;
-    }
-}
-
 .hero-text h1 {
     font-family: 'Fredoka One', cursive;
     text-align: center;
@@ -214,9 +158,70 @@ p {
     text-align: left;
 }
 .about {
-    font-family: 'Readex Pro', sans-serif;
+  font-family: 'Readex Pro', sans-serif;
   color: black;
-  text-decoration: underline;
   text-align: center;
-  font-weight: 100;
+}
+
+@media (max-width: 992px) {
+    .navbar{
+        height:100px;
+        padding: 12px;
+    }
+    .navbar .inner_navbar{
+        flex-direction: column;
+    }
+    .main_container {
+    }
+}
+
+@media (max-width: 728px) {
+    .navbar{
+        height:60px;
+    }
+    .navbar .inner_navbar{
+        flex-direction: row;
+    }
+    .main_container {
+    }
+
+    .navbar .menu ul {
+        position: absolute;
+        margin-top:0;
+        top: 60px;
+        left: 0;
+        display: block;
+        background: black;
+        width: 100%;
+    }
+    .navbar .menu ul li {
+        padding: 10px
+    }
+    .navbar .menu ul a{
+        width: 100%;
+        padding: 12px;
+        align-content: center;
+    }
+    .navbar .hamburger {
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 25px;
+        color: #09F4DF;
+        font-size: 25px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    .navbar .hamburger:hover {
+        color: #fff;
+    }
+    .navbar .menu{
+        display: none;
+    }
+    .navbar .menu.active{
+        display: block;
+    }
+    .main_container .content .item_wrap{
+        width: 100%;
+    }
 }
